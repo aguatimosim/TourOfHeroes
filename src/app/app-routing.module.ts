@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'detail/:id', component: HeroDetailComponent }    // o ":" indica que "id" È um par‚metro
+  { path: 'detail/:id', component: HeroDetailComponent }    // o ":" indica que "id" √© um par√¢metro
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],    // configura o router no nÌvel da APLICA«√O, baseado na URL corrente do browser
+  imports: [RouterModule.forRoot(routes)],    // configura o router no n√≠vel da APLICA√á√ÉO, baseado na URL corrente do browser
   exports: [RouterModule]
 })
 

@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -32,9 +33,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-)
+    environment.production ?
+    [] : HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
